@@ -1,4 +1,13 @@
-function textCosineSimilarity(strA, strB) {
+/**
+ * Get the cosine similarity fo two strings E.g. =textCosineSimilarity("I love candy","I like candy")
+ * @param {string} strA first string
+ * @param {string} strA second string
+ * @param {mode} mode: "" = case seinsitive or "I"= case insensitive
+ * @returns {real} a value vetween 0 and 1.
+ * @customfunction
+ */
+
+function textCosineSimilarity(strA, strB, mode="") {
 
   // Adapted from Suman Kunwar's solution
   // https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968
@@ -47,6 +56,16 @@ function textCosineSimilarity(strA, strB) {
   }
 
   // Entry point
+
+  // Coerce to string
+  strA = strA + "";
+  strB = strB + "";
+
+  if (mode=="I")
+  {
+    strA = strA.toLowerCase();
+    strB = strB.toLowerCase();
+  }
 
   var termFreqA = termFreqMap(strA);
   var termFreqB = termFreqMap(strB);
