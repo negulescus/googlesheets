@@ -1,5 +1,5 @@
 /**
- * Get the cosine similarity fo two strings E.g. =textCosineSimilarity("I love candy","I like candy")
+ * Get the cosine similarity of two strings E.g. =textCosineSimilarity("I love candy","I like candy")
  * @param {string} strA first string
  * @param {string} strA second string
  * @param {mode} mode: "" = case seinsitive or "I"= case insensitive
